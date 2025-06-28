@@ -9,14 +9,18 @@
 
     //Entrada
     let porte = prompt(`Informe o porte do seu cão (pequeno, médio ou grande)`);
-    let idade = Number(prompt(``));
-    porte = porte.toUpperCase;
+    let idade = Number(prompt(`Informe a idade do seu cão`));
     //Processamento
-    let mensagem;
+    porte = porte.toUpperCase();
     (porte == `PEQUENO`) ?
-    ()
-    
+    (idade = idade * 5) :
+     (porte == `MÉDIO` || porte == `MEDIO`) ?
+     (idade = idade * 6) :
+     (porte == `GRANDE`) ?
+     (idade = idade * 7) :
+     alert(`Informe um porte válido (pequeno, médio ou grande)`);
+      
     //Saída
-    
+     document.write(`A idade do seu cão é ${idade}`);
 
 </script>

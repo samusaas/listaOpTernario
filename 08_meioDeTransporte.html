@@ -6,12 +6,18 @@
     // Verifique qual é o meio de transporte mais barato e apresente em tela, especificando quanto custará para ir e voltar do trabalho diariamente.
 
     //Entrada
-
-
+    let precoLitro = Number(prompt(`Informe o preço do litro do combustível`));
+    let litrosUsados = Number(prompt(`informe a quantidade de litros usados para ir ao trabalho diariamente`));
+    let publico = Number(prompt(`Informe o preço do transporte público que deverá pagar para se deslocar ao trabalho diariamente`));
     //Processamento
-
-    
+    let privado = precoLitro * litrosUsados
+    let mensagem;
+    (privado > publico) ?
+     (mensagem = `Ir por transporte público é mais barado, custando ${publico}`) :
+     (publico > privado) ?
+     (mensagem = `Ir por transporte privado é mais barato, custando ${privado}`) :
+     (mensagem = `ambos custam o mesmo (${publico})`);
     //Saída
-
+    document.write(`${mensagem}`);
     
 </script>
