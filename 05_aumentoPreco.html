@@ -8,11 +8,18 @@
         //- acima de 1500: aumento de 5 %
     
     //Entrada
-
+     let preco = Number(prompt(`Informe o preço do produto`));
 
     //Processamento
-
-    
+    let aumento = preco;
+    (preco <= 280) ? 
+    (aumento = aumento * 0.20) :
+    (preco <= 700) ?
+    (aumento = aumento * 0.15) :
+    (preco <= 1500) ?
+    (aumento = aumento * 0.10) :
+    (aumento = aumento * 0.05);
+    let precoFinal = preco + aumento;
     //Saída
-
+    document.write(`Aumento de ${aumento}, o preço final é ${precoFinal}`);
 </script>
