@@ -8,11 +8,16 @@
     // Apresente o salário final recebido pelo funcionário semanalmente e o preço de cada hora trabalhada.
 
     //Entrada
-
-
+   let horas = Number(prompt(`Informe quantas horas você trabalha semanalmente`));
+   let salario = Number(prompt(`Informe quanto você recebe por hora trabalhada`));
     //Processamento
-
-    
+    let salarioFinal = horas * salario;
+    (horas < 45) ? 
+    (salarioFinal = salarioFinal) :
+    (horas <= 60 && horas > 45) ? 
+    (salarioFinal =  salarioFinal + (salarioFinal * 0.2)) :
+    (salarioFinal = salarioFinal + (salarioFinal * 0.3));
+    let precoHora = salarioFinal / horas;
     //Saída
-
+     document.write(`O seu salário atual é: ${salarioFinal}, e cada hora custa: ${precoHora}`);
 </script>
